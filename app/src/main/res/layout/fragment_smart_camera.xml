@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+    <com.abcpen.camera.sdk.CameraView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_take_finish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/camera_loading_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera_loading"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera_right"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/take_pic_bg"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/take_pic_cancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:enabled="false"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/take_photo_loading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/iv_take_photo_democf"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            />
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/open_album_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/auto_focus_al"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/camera_right">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera_left"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/camera_right">
+
+        <View
+            android:id="@+id/vShutter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:visibility="invisible"/>
+
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/flash_toggle_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_flash_off"/>
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/guideriv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/selector_guider"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/tishiiv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_hint"/>
+</RelativeLayout>

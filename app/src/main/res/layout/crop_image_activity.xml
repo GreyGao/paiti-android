@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/crop_image_retake"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:src="@drawable/selector_btn_cancel"/>
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/crop_image_ok"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:src="@drawable/selector_tea_finish"/>
+
+        <com.abcpen.simple.view.RotateImageView
+            android:id="@+id/crop_image_rotate"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/selector_rotate"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/right"
+        android:background="@android:color/black">
+
+        <com.abcpen.simple.crop.update.CropImgView
+            android:id="@+id/crop_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
